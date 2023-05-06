@@ -1,0 +1,13 @@
+#Eight Monkeys
+#Bringing the Classic Childhood song to life in Python
+
+def Eight_monkeys():
+    num = 8
+    while num > 0:
+        print( num, "little monkeys jumping on the bed.")
+        print("One fell off and bumped his head.")
+        print("Mama called the Dr and the Dr said 'No more monkeys jumping on the bed!'")
+        num -= 1
+    print("No more monkeys jumping on the bed!")
+
+Eight_monkeys()
