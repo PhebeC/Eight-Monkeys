@@ -1,0 +1,35 @@
+#Author: ChatGPT
+# PDF Conversion
+
+# Make sure you have the pdf2docx library installed before running this script. You can install it by executing the following command:
+# pip install pdf2docx
+# Remember to replace "/path/to/input.pdf" with the actual path to your input PDF file, and "/path/to/output.docx" with the desired path for the output Word document.# pip install pdf2docx
+
+import os
+from pdf2docx import Converter
+
+# Provide the paths for the PDF and the output Word document
+pdf_file = "/Users/chardphebe/Downloads/Controlled Exchange MEMO HHB340.pdf"
+docx_file = "/Users/chardphebe/Downloads/Controlled Exchange MEMO HHB340.docx"
+
+def convert_pdf_to_docx(pdf_path, docx_path):
+    # Create a Converter object
+    converter = Converter(pdf_path)
+
+    # Convert the PDF to a Word document
+    converter.convert(docx_path, start=0, end=None)
+
+    # Close the Converter object
+    converter.close()
+
+    print("Conversion successful!")
+
+# Check if the input PDF file exists
+if os.path.exists(pdf_file):
+    # Convert the PDF to Word document
+    convert_pdf_to_docx(pdf_file, docx_file)
+else:
+    print("Input PDF file not found.")
+
+
+# Once you run the script, it will convert the PDF file to a Word document and display a success message.
